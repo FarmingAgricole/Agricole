@@ -1,0 +1,46 @@
+\select@language {french}
+\contentsline {section}{\numberline {1}Introduction}{1}
+\contentsline {paragraph}{Fonctionnalit\'es}{2}
+\contentsline {section}{\numberline {2}Sp\'ecification}{2}
+\contentsline {subsection}{\numberline {2.1}Le fermier et le joueur}{2}
+\contentsline {paragraph}{Utilit\'e du fermier:}{2}
+\contentsline {subsection}{\numberline {2.2}Le temps en jeu}{2}
+\contentsline {paragraph}{Syst\`eme de tour de jeu:}{2}
+\contentsline {paragraph}{Cons\'equences sur la ferme}{2}
+\contentsline {subsection}{\numberline {2.3}Les animaux}{2}
+\contentsline {paragraph}{Statistiques des animaux:}{3}
+\contentsline {paragraph}{Quatre animaux:}{3}
+\contentsline {paragraph}{Une production variable:}{3}
+\contentsline {paragraph}{Une barre de vie:}{3}
+\contentsline {subsection}{\numberline {2.4}Les cultures/plantations}{3}
+\contentsline {paragraph}{Caract\'eristiques:}{3}
+\contentsline {paragraph}{Fonctionnement:}{4}
+\contentsline {paragraph}{Les cat\'egories:}{4}
+\contentsline {paragraph}{Une ouverture sur diff\'erents styles de jeu:}{4}
+\contentsline {subsection}{\numberline {2.5}Les entrep\^ots}{4}
+\contentsline {paragraph}{Utilit\'e:}{4}
+\contentsline {paragraph}{Les risques:}{4}
+\contentsline {subsection}{\numberline {2.6}Le march\'e:}{5}
+\contentsline {paragraph}{Une \'economie dans le jeu:}{5}
+\contentsline {paragraph}{Que peut-on acheter?:}{5}
+\contentsline {subsection}{\numberline {2.7}Les v\'ehicules:}{5}
+\contentsline {paragraph}{Les niveaux d'\'etat du vehicule:}{5}
+\contentsline {paragraph}{Am\'elioration du v\'ehicule}{5}
+\contentsline {subsection}{\numberline {2.8}Les evenements al\'eatoire:}{5}
+\contentsline {paragraph}{Principe}{5}
+\contentsline {paragraph}{Les diff\'erents \'ev\'enements et cons\'equences:}{5}
+\contentsline {section}{\numberline {3}Manuel Utilisateur}{6}
+\contentsline {subsection}{\numberline {3.1}Introduction}{6}
+\contentsline {subsection}{\numberline {3.2}D\'emarrage du jeu}{6}
+\contentsline {subsubsection}{\numberline {3.2.1}Choix des param\`etres du jeu}{6}
+\contentsline {subsubsection}{\numberline {3.2.2}}{6}
+\contentsline {subsection}{\numberline {3.3}D\'eroulement du jeu}{6}
+\contentsline {subsubsection}{\numberline {3.3.1}D\'ebut du jeu}{6}
+\contentsline {subsubsection}{\numberline {3.3.2}La Ferme}{6}
+\contentsline {subsubsection}{\numberline {3.3.3}Le Magasin}{6}
+\contentsline {paragraph}{Achats}{6}
+\contentsline {subparagraph}{}{7}
+\contentsline {paragraph}{Ventes}{7}
+\contentsline {subparagraph}{}{7}
+\contentsline {subsubsection}{\numberline {3.3.4}Gestion des animaux}{7}
+\contentsline {subsubsection}{\numberline {3.3.5}Gestion des cultures}{7}

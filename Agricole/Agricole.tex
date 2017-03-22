@@ -1,0 +1,45 @@
+%Définir le format du document: papier, taille de police, type de document, etc.
+\documentclass[a4paper, 11pt]{article}
+
+%%%%%%%%% Packages externes utilisés %%%%%%%%%%%%%%%%%%%
+\usepackage[french]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+%\usepackage{algorithm2e}
+
+
+%La mise en page du rapport, NE PAS MODIFIER.
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ left=20mm,
+ right=20mm,
+ top=20mm,
+ bottom=20mm,
+ }
+
+%%%%%%%%% Le corps du document entre begin et end %%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%Page de garde
+\input{first_page.tex}
+% Remerciements
+\section*{Remerciements}
+
+Nous tenons à remercier notre enseignant, Monsieur Tianxao Liu pour son aide afin de monter notre projet étape par étape et qui nous a consacré du temps. De plus, nous voulons remercier Monsieur Lemaire Marc, enseignant au département Science Informatique pour son apprentissage des bases au langage Java.
+
+%Génération automatique de la table des matières, de la liste des figures et de la liste des tableaux
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{introduction.tex}
+\input{specifications.tex}
+\input{manuel.tex}
+
+\end{document}

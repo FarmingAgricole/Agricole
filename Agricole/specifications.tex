@@ -1,0 +1,157 @@
+\section{Spécification}
+\label{sec:specification}
+
+Nous avons donc vue précédemment le fonctionnement global du jeu ainsi que les diverses fonctionnalités, nous allons dans cette section, voir plus en détails les différentes spécificités de notre logiciel.
+
+\subsection{Le fermier et le joueur}
+\label{sec:fermier}
+
+\paragraph{Utilité du fermier:}Tout d'abord dans la partie \ref{sec:introduction} nous avons évoquer le fait que le joueur incarne le rôle du fermier, en effet ce-dernier obéit à l'utilisateur et effectue les tâches qui lui sont ordonnées. Le fermier est soumis au temps, c'est-à-dire que chaque action qu'il exécute, qu'elle soit programmée quotidiennement ou non, lui prend du temps. D'autre part il possède une somme d'argent qui lui permet de faire differents achats via le marché afin d'améliorer sa ferme, il peut aussi interagir avec les parcelles, les cultures et les entrepôts qui servent à stocker les multiples ressources générer par la ferme.
+	
+\subsection{Le temps en jeu}
+\label{sec:tour}
+
+Afin de se rapprocher le plus d'un jeu de simulation il est nécessaire d'avoir un facteur permettant de limiter le joueur dans ses actions et qui influx sur son avancement.
+
+\paragraph{Système de tour de jeu:}Le temps en jeu dans notre logiciel est représenter par des tours, un tour correspond à un jour dans le jeu. Voici une liste permettant de mieux comprendre comment le temps est géré : 
+\vspace* {3mm}
+
+\begin {itemize}
+
+\item Une action réalisée par le fermier prend un certain temps dans une journée, le joueur peut donc effectuer un nombre d'action limité par tour. 
+\item Le fermier peut réaliser des actions tant que le jour n'est pas terminé.
+\item Un tour se termine obligatoirement si il est minuit.
+\item Le fermier peut dormir pour terminer le tour et passer au jour suivant.
+\item Des actions programmée par l'utilisateur permettent au fermier de réaliser des actions
+quotidiennement.
+\item Grâce aux actions programmées quotidiennement le fermier peut passer un certains nombre de tour
+tout en travaillant chaque jour, cela permet à l'utilisateur de jouer plus rapidement s'il le
+souhaite. 
+
+\end{itemize}
+
+\paragraph{Conséquences sur la ferme}Les tours peuvent avoir différents impacts sur la ferme, en effet les animaux, eux aussi, sont contraints aux temps étant donné qu'au bout d'un nombre de tours (prédéfinie) passer dans la ferme les animaux gagnent un an et peuvent mourrir à un certain âge. De plus, des évenements aléatoires peuvent avoir lieu à chaque debut de tour ayant des conséquences négatives telles que la perte partielle de ressources dû à un incendie nous traiterons ces évenements plus en détails plus tard dans cette partie.
+
+\subsection{Les animaux}
+\label {sec:animaux}
+
+Dans une ferme une grande partie des ressources produites proviennent des animaux, que ce soit de la viande, de la laine (mouton), du lait (vache) ... Ils font donc parti du coeur de la ferme et permettent au joueur de produire des ressources qu'il pourra par la suite vendre sur le marché.
+
+\paragraph{Statistiques des animaux:}Pour l'élevage nous avons décidés que chaque animal disposera d'une barre de vie et un état relatif à sa vie courrante de ce fait si un animal est par exemple mal nourrit il perd de la vie de même si ce-dernier vieillit. Voici les quatre états qu'un animal peut avoir:
+
+\vspace* {3mm}
+\begin{itemize}
+
+ \item Si un animal a entre 50\% et 75\% de vie, il possède l'état « n'a pas la forme ».
+ \item Si un animal entre 25\% et 50\% de vie, il possède l'état « est en mauvaise santé »
+ \item Entre 1\% et 25\% de vie il possède l'état « est en très mauvaise santé »
+ \item A 0\% de vie l'animal meurt.
+
+\end{itemize}
+\vspace* {3mm}
+
+De plus tous les animaux auront la possibilité de se reproduire avec d'autres animaux de la même espèce et de sexe opposé, le fermier obtiendra ainsi un nouvel animal de la même espèce que ses parents avec 75\% de vie et 0 jours (en âge) ce qui nous semble assez réaliste.
+
+\paragraph{Quatre animaux:}Nous sommes partis sur une base de quatre catégories d'animaux qui ont chacune un comportement différent l'une de l'autre, c'est-à-dire, soit une alimentation particuliere et/où une production de ressource variée. Nous avons donc choisi la vache, le mouton, le cochon et la poule, cela nous semble cohérent, en effet nous respectons les catégories bovins, ovins, porcins et volaille déterminées dans l'élevage conventionnel des agriculteurs. Ce sont de plus, des animaux variés représentant un vaste panel d'animaux d'élevage fermier permettant à la fois une diversité dans les productions et à la fois une meilleure immersion. Voici une liste des comportements spécifiques à chaque type d'animal:
+\vspace{3mm}
+\begin{itemize}
+	\item Les vaches, celles-ci seront nourries à partir de foin qui doit être acheté au magasin, pourront
+produire du lait ,et si abattues, de la viande.
+	\item Les Cochons seront nourris avec des graines et produiront à l'image de la vache de la viande de
+la même manière.
+	\item Les Moutons nourris avec du foin produiront de la viande si abattus et de la laine dans le cas
+contraire.
+	\item Les Poules ont une alimentation basé sur les graines, en suivant le même schéma que pour les animaux précédents elles pourront produire soit des oeufs soit de la viande.
+\end{itemize}
+\vspace{3mm}
+
+\paragraph{Une production variable:}Les ressources générées par les animaux dépendront de l'état de ces derniers par exemple une vache en bon état ,c'est-à-dire, correctement nourrit et ayant un âge médian produira plus de viande qu'une vache en fin de vie, pour les plantations leur production dépendront du véhicule de récolte si celui-ci est plus ou moins performant et en bon état.
+
+\paragraph{Une barre de vie:}Nous avons evoqué à plusieurs reprises un systeme de point de vie pour les animaux, celle-ci dépendra de l'animal par exemple 250 points de vie maximum pour une vache, 100 pour une poule  et elle diminuera lorsque le joueur oublie /ne peut pas nourrir l'animal en question. Elle peut aussi être affectée par certains éléments aléatoires (exemple : une épidémie). Il est bien-sûr possible de remonter la barre de vie de l'animal en le nourrissant quotidiennement cependant l'âge affectera directement les points de vie maximum de l'animal ce qui signifie qu'à un certains âge pour une vache au lieu d'être a 250 point de vie maximum, n'en disposera que de 150 par exemple.
+
+ 
+\subsection{Les cultures/plantations}
+\label{sec:cultures}
+
+\paragraph{Caractéristiques:}Premierement afin de rendre les cultures réaliste et plus immersives nous avons decidé de rendre celles-ci soumise au temps, elles ont donc un âge correspondant à leur maturité, lorsque la culture atteint un certain âge minimum, elle peut être récoltée. Elle a également des points de vie (pdv) qui décroit si le joueur ne l'arrose pas variant de 0\% à 100\%, on considère la plantation comme morte à 0\%. Deuxièmement arroser, une culture régenere de la vie sans possibilité de depasser la limite maximale, c'est-à-dire une plantation fixer à 100pdv maximum, si de base elle est à 100pdv avant l'arrosage elle le restera après cette action, néanmoins si l'utilisateur n'arrose pas ses cultures à chaque tour de jeu, ces dernières perdront de la vie tant qu'elle ne le sont pas.
+
+\paragraph{Fonctionnement:}D'une part lorsqu'une culture est plantée, elle occupe une parcelle, elle dispose également de plusieurs états graphiques: arrosée, non arrosée, prête à être récoltée. De plus nous avons choisi deux catégories de plantations, les fruits et les légumes toutes deux seront à l'image des animaux, dépendantes du temps, en effet il est possible que les platations meurent que ce soit par un manque d'hydratation ou par un événement aléatoire telle qu'un incendie par exemple, le développement des fruits et des légumes sera différent ainsi que la production finale, le fermier devra donc arroser chaque parcelle de plantation tous les jours pour garantir une récolte optimale.
+
+\paragraph{Les catégories:}La fraise représentera la catégorie fruit et la carotte celle des légumes, voici une liste permettant de différencier les deux catégories citées.
+
+\vspace{3mm}
+\noindent
+La fraise:
+\vspace{3mm}
+\begin{itemize}
+	\item Atteint l'âge de récolte au bout de 12jours. 
+	\item Perd 20\% de vie si on ne l'arrose pas un jour. 
+	\item Gagne 5\% de vie si on l'arrose un jour. 
+	\item Se vendra quatre fois plus cher qu'un légume à sa récolte, afin de rentabiliser le temps avant de pouvoir être récolté.
+	\item Les graines ont un prix plus élevé que les légumes.
+\end{itemize}
+\vspace{3mm}
+La carotte:
+\vspace{3mm}
+\begin{itemize}
+	\item Atteint l'age de récolte au bout de 4 jours.  
+	\item Perd 10\% de vie si on l'arrose pas un jour. 
+	\item Gagne 10\% de vie si on l'arrose un jour.
+	\item A l'unité la carotte se vendra à un prix peu cher. 
+\end{itemize}
+
+\paragraph{Une ouverture sur différents styles de jeu:}Nous avons vu les caractéristiques et fonctionnement des deux catégories, celles-ci sont également présentes afin d'apporter un aspect risque/bénéfice au jeu, en effet l'utilisateur aura le choix, en cultivant des légumes, il disposera d'une culture très productrice (à condition de bien s'en occuper) sur une courte durée mais il ne gagnera pas énormement d'argent à la revente, en faisant ce choix l'utilisateur pourra développer sa culture sereinement, sans grands risques et en s'assurant un revenu régulier. A l'inverse si le joueur prend le risque de cultiver des fraises, il pourra gagner beaucoup plus d'argent mais devra être minutieux sur leur entretient, ces deux styles de jeu permettent d'instaurer une première linéarité dans l'expérience de jeu, puisqu'un nouveau joueur aura tendance à être prudent avec peu de moyens et chosira probablement les carottes pour premières cultures, au fils des récoltes et avec un peu plus d'expérience il pourra s'acheter des graines de fraise et tenter de gagner de plus en plus au fur et à mesure. 
+
+\subsection{Les entrepôts}
+\label{sec:parcelles}
+
+\paragraph{Utilité:}De multiples entrepôts sont mis à disposition sur la map chaque entrepôt ne pourra contenir qu'un seul type de ressource et définira le stock maximum de cette dernière, au cours de la partie et de l'avancement du joueur il sera possible d'améliorer les entrepôts et ainsi augmenter son stockage maximum. Cela permet d'ajouter un élément au systeme d'avancement dans le jeu, en effet si le joueur atteint la limite de stockage dans une ressource il ne pourra pas en avoir d'avantage et sera forcer d'améliorer ses entrepôts s'il ne veut pas les gâcher.
+
+\paragraph{Les risques:}Nous avons instaurer aux entrepôts contenant la viande et les cultures une ''barre'' de périssabilité, pour rendre le jeu plus réaliste et apporter du ''challenge'' ce qui siginie ces ressources devront être vendue le plus tôt possible avant d'être détruite. Vous l'aurez compris, pour avancer dans le jeu le joueur doit obligatoirement passer par l'utilisation des entrepôts et toujours être attentif à ces derniers sous peines de perdre une grande partie de sa progression.
+
+\subsection{Le marché:}
+\label{sec:marché}
+
+\paragraph{Une économie dans le jeu:} Une fois de plus afin de rendre le jeu plus réaliste et d'améliorer la qualité du gameplay, un systeme d'économie nous semble judicieux/indispensable ainsi pour le bon foncitonnement du jeu il est nécessaire qu'elle soit la plus juste possible, il est clair qu'abattre une vache doit être rentable dans l'immediat alors que la production de lait devra l'être sur le long terme, c'est pourquoi nous fixerons les prix et créeront un systeme d'offre et de demande artificiel. Par exemple: En vendant un lot de 10fraises pour 10 d'ors/unité, puis les 10 prochaines seront vendues pour 8 d'ors/unité. Du côté du joueur, cela permet d'éviter les abus sur les ressources qui valent cheres et qui sont faciles à produire, et en plus de cela le joueur devra rester à l'affût sur les ressources les plus rentables pour lui et d'envisager un autre type de culture par exemple.
+
+\paragraph{Que peut-on acheter?:}Comme expliquer ci-dessus, l'utilisateur trouvera dans le marché de quoi alimenter sa ferme, planter des fraises et des carottes, des animaux... Il pourra y vendre toutes les ressources produites par sa ferme (viande, cultures...). De plus le joueur pourra acheter via le marché de nouveaux véhicules lui permmettant d'augmenter la production de ses cultures.
+
+\subsection{Les véhicules:}
+\label{sec:véhicules}
+
+\paragraph{Les niveaux d'état du vehicule:}Le véhicule de récolte disposera de cinq niveaux d`'état dégressifs, on prédéfinit un nombre d'utilisation (variable par rapport au niveau actuel) du véhicule avant de baisser d'un niveau, au niveau cinq le véhicule est intact et permet de récolter 100\% des cultures, niveau quatre un malus est appliqué et la récolte subira 15\% de perte, niveau trois un malus de 30\%, niveau deux 50\% et niveau un le véhicule est en panne et doit être réparé ou remplace auquel cas le joueur ne pourra pas récolter ses plantations, néanmoins il est possible de réparer (au maximum 3 fois/Véhicule) en échange de pièces son véhicule de récolte le prix variant en fonction de l'état du véhicule, après réparation le véhicule reviendra au niveau cinq.
+\paragraph{Amélioration du véhicule}Le joueur dispose d'un véhicule par défaut en commencant la partie, mais il est notament possible d'acheter via le marché un véhicule dont les capacités de récolte sont supérieur au véhicule de base qui est peu efficace, ainsi l'utilisateur sera implicitement amené à en acheter un plus performant permettant une meilleur productivité, cela s'inscrit dans notre logique de progression du joueur.
+
+\subsection{Les evenements aléatoire:}
+\label{sec:event}
+\paragraph{Principe}Pour ajouter de la difficulté au jeu nous ajoutons des événements aléatoires, la probabilité d'apparition d'un événement aléatoire dans une journée du jeu dépend de la difficulté choisi par l'utilisateur au début de la partie ( voir scénario d'utilisation du logiciel ). Les probabilités sont réparties ainsi : 
+\vspace{3mm}
+\begin{itemize}
+	\item En mode facile il y a 5\% de chance qu'un événement aléatoires ait lieu.
+	\item En difficulté normal 10\% de chance qu'un événement aléatoires ait lieu.
+	\item 15\% de chance en difficile.
+\end{itemize}
+\vspace{3mm}
+\paragraph{Les différents événements et conséquences:}Nous avons établi 3 événements aléatoires :
+\vspace{3mm}
+\begin{itemize}
+	\item « Incendie dans la grange », le fermier perd la moitié de ses denrées.
+	\item « Epidémie du troupeau », chaque animal à 75\% de chance de mourir.
+	\item « Sécheresse » : chaque culture a 70\% de chance de mourir.
+\end{itemize}
+Ces événements sont équiprobables, si un événement aléatoire doit se produire, alors chacun a 1/3. Il va de soi que ces événements aléatoires sont tous néfastes, cela permet une meilleur immersion et ajoute une certaine difficultés sans non plus tomber dans le pile ou face.
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+
+	
+	

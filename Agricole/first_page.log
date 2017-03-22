@@ -1,0 +1,250 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.3.20)  20 MAR 2017 20:31
+entering extended mode
+**./first_page.tex
+(first_page.tex
+LaTeX2e <2017/01/01> patch level 1
+Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
+
+! LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{titlepage}
+                     {
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4     \begin{center}
+                      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--4
+[] 
+ []
+
+! Undefined control sequence.
+l.6         {\Large
+                    \textbf {Université de Cergy-Pontoise}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no é in font cmbx10!
+
+Overfull \hbox (46.39003pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/bx/n/10 Universit 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (33.96512pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/bx/n/10 Cergy- 
+ []
+
+
+Overfull \hbox (42.58449pt too wide) in paragraph at lines 6--6
+ \OT1/cmr/bx/n/10 Pontoise 
+ []
+
+! Undefined control sequence.
+l.8         {\Large
+                    \textbf {RAPPORT}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (57.34691pt too wide) in paragraph at lines 8--8
+ []\OT1/cmr/bx/n/10 RAPPORT 
+ []
+
+Missing character: There is no p in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no è in font cmbx10!
+Missing character: There is no é in font cmbx10!
+
+Overfull \hbox (37.2637pt too wide) in paragraph at lines 11--11
+ []\OT1/cmr/bx/n/10 Licence 
+ []
+
+
+Overfull \hbox (74.90237pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 d'Informatique 
+ []
+
+
+Overfull \hbox (42.16646pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 deuxime 
+ []
+
+
+Overfull \hbox (23.63875pt too wide) in paragraph at lines 11--11
+ \OT1/cmr/bx/n/10 anne 
+ []
+
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+! Undefined control sequence.
+l.16 	{\Huge
+             \textsf{Agricole}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (33.75006pt too wide) in paragraph at lines 16--16
+ []\OT1/cmss/m/n/10 Agricole 
+ []
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no é in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+! Undefined control sequence.
+l.20         {\Large
+                     \textbf {PHAM Duc-Duy, CHAHBOUN Elias, VU Hong Phuc}} \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (36.47203pt too wide) in paragraph at lines 20--20
+ []\OT1/cmr/bx/n/10 PHAM 
+ []
+
+
+Overfull \hbox (24.15265pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 Duc- 
+ []
+
+
+Overfull \hbox (23.51376pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 Duy, 
+ []
+
+
+Overfull \hbox (38.83313pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 CHAH- 
+ []
+
+
+Overfull \hbox (34.66647pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 BOUN 
+ []
+
+
+Overfull \hbox (27.26509pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 Elias, 
+ []
+
+
+Overfull \hbox (17.54156pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 VU 
+ []
+
+
+Overfull \hbox (26.88875pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 Hong 
+ []
+
+
+Overfull \hbox (25.43042pt too wide) in paragraph at lines 20--20
+ \OT1/cmr/bx/n/10 Phuc 
+ []
+
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 7 in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> ./first_page.tex
+                    
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 13 strings out of 493333
+ 169 string characters out of 3147406
+ 54255 words of memory out of 3000000
+ 3641 multiletter control sequences out of 15000+200000
+ 4253 words of font info for 16 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 13i,1n,10p,107b,126s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!
