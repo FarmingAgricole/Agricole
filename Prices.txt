@@ -1,0 +1,28 @@
+par unité:
+
+*animaux et leur production:
+
+vache = 1600€
+lait = 100€
+cochon = 400€
+poule = 50€
+oeuf = 5€
+Mouton = 150€
+laine = 10€
+
+si on revend un animal on le vend moitié prix de l'achat
+
+*graines:
+
+graine de fraise = 50€
+graine de carotte = 10€
+
+*revente: 
+
+fraise = 300€ lapsing max = 5jours
+carottes = 50€ lapsing max = 10jours
+
+ressources:
+
+hay = 10€
+grain = 1€
