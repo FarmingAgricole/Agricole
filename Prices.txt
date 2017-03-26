@@ -26,3 +26,12 @@ ressources:
 
 hay = 10€
 grain = 1€
+
+Abattage:
+
+1meat = 10€ (1 kilo de viande)
+
+poule = 7 meat
+vache = 300meat
+mouton = 30 meat
+cochon = 80*2= 160 meat
